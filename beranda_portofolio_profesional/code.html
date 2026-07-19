@@ -160,7 +160,7 @@ if (typeof tailwind !== 'undefined') {
 </header>
 <main class="pt-16 min-h-screen">
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center py-section-gap overflow-hidden">
+<section class="relative min-h-screen lg:min-h-[921px] flex items-center py-12 md:py-section-gap overflow-hidden">
 <!-- Background Decorative Element -->
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
 <div class="absolute top-1/4 right-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -203,7 +203,7 @@ if (typeof tailwind !== 'undefined') {
 </div>
 </div>
 <!-- Hero Visual (Bento-style layout for imagery) -->
-<div class="lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="lg:col-span-5 relative mt-12 lg:mt-0 w-full">
 <div class="relative grid grid-cols-2 gap-4">
 <!-- Main Portrait Card -->
 <div class="col-span-2 glass-card rounded-xl overflow-hidden aspect-[4/5] relative group animate-float">
@@ -215,14 +215,14 @@ if (typeof tailwind !== 'undefined') {
 </div>
 </div>
 <!-- Floating Stat Card 1 -->
-<div class="glass-card p-6 rounded-xl absolute -left-12 top-1/4 z-30 hidden xl:block animate-float" style="animation-delay: 1s">
-<span class="font-display-xl text-primary text-headline-lg">3.85</span>
-<p class="font-label-sm text-label-sm text-on-surface-variant">IPK • Cum Laude</p>
+<div class="glass-card p-4 md:p-6 rounded-xl md:absolute md:-left-12 md:top-1/4 z-30 animate-float col-span-1" style="animation-delay: 1s">
+<span class="font-display-xl text-primary text-headline-lg-mobile md:text-headline-lg">3.85</span>
+<p class="font-label-sm text-[10px] md:text-label-sm text-on-surface-variant">IPK • Cum Laude</p>
 </div>
 <!-- Floating Stat Card 2 -->
-<div class="glass-card p-6 rounded-xl absolute -right-8 bottom-1/4 z-30 hidden xl:block animate-float" style="animation-delay: 2s">
+<div class="glass-card p-4 md:p-6 rounded-xl md:absolute md:-right-8 md:bottom-1/4 z-30 animate-float col-span-1" style="animation-delay: 2s">
 <span class="material-symbols-outlined text-primary mb-2" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
-<p class="font-label-sm text-label-sm text-on-surface-variant">JLPT N3 Certified</p>
+<p class="font-label-sm text-[10px] md:text-label-sm text-on-surface-variant">JLPT N3 Certified</p>
 </div>
 </div>
 </div>
@@ -256,7 +256,7 @@ if (typeof tailwind !== 'undefined') {
 </section>
 
 <!-- Featured Section (Brief Preview) -->
-<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto" id="projects">
+<section class="px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto" id="projects">
 <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
 <div class="max-w-xl">
 <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">Proyek &amp; Pencapaian</span>
@@ -309,7 +309,7 @@ if (typeof tailwind !== 'undefined') {
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-section-gap bg-surface-container dark:bg-surface-container-high">
+<footer class="w-full py-12 md:py-section-gap bg-surface-container dark:bg-surface-container-high">
 <div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-base">
 <div class="flex flex-col items-center md:items-start gap-4">
 <span class="font-display-xl text-headline-lg-mobile text-on-surface tracking-tighter">Zalfa Alghina Maulida</span>
