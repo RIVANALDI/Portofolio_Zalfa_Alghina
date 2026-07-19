@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Portfolio</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;family=Jetbrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed": "#410000", "inverse-primary": "#0062a1", "surface-container-high": "#2a2a2a", "on-background": "#e5e2e1", "on-tertiary-container": "#ff9d8e", "on-primary-fixed-variant": "#00497a", "on-error-container": "#ffdad6", "on-secondary": "#55006b", "error-container": "#93000a", "on-secondary-container": "#f5b8ff", "primary-fixed-dim": "#9ccaff", "on-primary": "#003256", "on-surface": "#e5e2e1", "on-secondary-fixed-variant": "#790096", "on-tertiary-fixed-variant": "#8d160c", "surface-variant": "#353534", "surface-dim": "#131313", "on-secondary-fixed": "#340042", "primary-fixed": "#d0e4ff", "surface-tint": "#9ccaff", secondary: "#f3aeff", "secondary-fixed-dim": "#f3aeff", "inverse-on-surface": "#313030", "on-primary-container": "#7bbcff", "surface-container": "#201f1f", "tertiary-container": "#8f170e", surface: "#131313", "surface-container-lowest": "#0e0e0e", "secondary-fixed": "#fcd6ff", "surface-bright": "#3a3939", background: "#131313", primary: "#9ccaff", error: "#ffb4ab", "on-error": "#690005", "on-surface-variant": "#cdc3d6", "inverse-surface": "#e5e2e1", "on-primary-fixed": "#001d35", "surface-container-highest": "#353534", "outline-variant": "#4b4454", "secondary-container": "#9301b6", outline: "#968d9f", "on-tertiary": "#690000", tertiary: "#ffb4a8", "primary-container": "#004b7d", "surface-container-low": "#1c1b1b", "tertiary-fixed": "#ffdad4", "tertiary-fixed-dim": "#ffb4a8"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "24px", "container-max": "1280px", "margin-mobile": "16px", "margin-desktop": "64px", "section-gap": "120px", base: "8px"}, fontFamily: {"display-xl": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "body-md": ["Inter"], "label-sm": ["JetBrains Mono"], headline: ["Hanken Grotesk"], display: ["Hanken Grotesk"], body: ["Inter"], label: ["Jetbrains Mono"]}, fontSize: {"display-xl": ["64px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["40px", {lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["32px", {lineHeight: "1.2", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "1.5", letterSpacing: "0.05em", fontWeight: "500"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #081425;
+            color: #d8e3fb;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(21, 32, 49, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(134, 148, 138, 0.2);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline-variant/10 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-display-xl text-headline-lg-mobile tracking-tighter text-on-surface dark:text-on-background" href="#">
+                Portfolio
+            </a>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8 font-label-sm text-label-sm">
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:opacity-80 transition-opacity text-primary dark:text-primary-fixed-dim" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="light_mode">light_mode</span>
+</button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-16 min-h-screen">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop py-section-gap overflow-hidden">
+<!-- Background Decorative Element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Hero Content -->
+<div class="lg:col-span-7 flex flex-col items-start gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Tersedia untuk proyek baru
+                    </div>
+<h1 class="font-display-xl text-display-xl max-w-2xl leading-tight">
+                        Membangun <span class="text-primary">Pengalaman Digital</span> yang Presisi &amp; Estetik.
+                    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Halo, saya seorang Creative Developer yang fokus pada integrasi teknologi mutakhir dengan desain minimalis. Saya membantu brand menciptakan identitas visual yang kuat melalui solusi teknis yang elegan.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="px-8 py-4 bg-primary text-on-primary font-label-sm text-label-sm rounded-[4px] hover:translate-y-[-2px] transition-all duration-300 shadow-lg shadow-primary/20 flex items-center gap-2 group" href="#projects">
+                            Lihat Proyek
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="px-8 py-4 border border-outline-variant/30 text-on-surface font-label-sm text-label-sm rounded-[4px] hover:bg-surface-container transition-all duration-300" href="#contact">
+                            Hubungi Saya
+                        </a>
+</div>
+<!-- Tech Stack Badge Area -->
+<div class="mt-8 flex items-center gap-6 opacity-60">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Keahlian</span>
+<div class="h-px w-12 bg-outline-variant"></div>
+</div>
+<div class="flex gap-4 grayscale">
+<span class="material-symbols-outlined text-headline-lg-mobile" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-headline-lg-mobile" data-icon="brush">brush</span>
+<span class="material-symbols-outlined text-headline-lg-mobile" data-icon="animation">animation</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual (Bento-style layout for imagery) -->
+<div class="lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="relative grid grid-cols-2 gap-4">
+<!-- Main Portrait Card -->
+<div class="col-span-2 glass-card rounded-xl overflow-hidden aspect-[4/5] relative group animate-float">
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60 z-10"></div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end professional cinematic portrait of a creative professional in a dimly lit, minimalist architectural setting. The person is looking thoughtfully away from the camera, illuminated by a soft green neon key light that mirrors the primary emerald green accent of the design. The mood is sophisticated, moody, and technically focused, utilizing deep shadows and crisp focus on facial details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7IgybqKuLPe0lI2pIYqPoUdq8tIPz5fQ9bJmz7iwnqcwBPlzsKRAfIKLqVUwM3LxzUgOHNUgcT2IRc312oHwfW2Nbo4pAOQbxkej3lQXVjnKpGwfzTbbZeyWv_Nw0u0F-E6RNcQrK-mrsVs8Ts1hQwiJeeTsCRMrVIiXoBcAIT2Cpi1QbCq4jVBPpLfiZ_Kl74oYCl4uBGGoCVjiMzN7upGnnRm8mf5CNfsxXF6_o6-_gHbQAatrlO5JXazXfLCOah_cW_eBPPrw"/>
+<div class="absolute bottom-6 left-6 z-20">
+<p class="font-label-sm text-label-sm text-primary mb-1">Creative Director</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">Alex Rivera</h3>
+</div>
+</div>
+<!-- Floating Stat Card 1 -->
+<div class="glass-card p-6 rounded-xl absolute -left-12 top-1/4 z-30 hidden xl:block animate-float" style="animation-delay: 1s">
+<span class="font-display-xl text-primary text-headline-lg">12+</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Tahun Pengalaman</p>
+</div>
+<!-- Floating Stat Card 2 -->
+<div class="glass-card p-6 rounded-xl absolute -right-8 bottom-1/4 z-30 hidden xl:block animate-float" style="animation-delay: 2s">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Terverifikasi Pro</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Section (Brief Preview) -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto" id="projects">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+<div class="max-w-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">Pekerjaan Terbaru</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Proyek Unggulan</h2>
+</div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary flex items-center gap-2 group transition-colors" href="#">
+                    Lihat Semua Proyek
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+<!-- Asymmetric Grid for Projects -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+<!-- Large Card -->
+<div class="lg:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-video mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, minimalist website UI design showcased on a sleek floating digital tablet. The design features bold typography, ample whitespace, and high-quality product photography of a modern minimalist chair. The lighting is soft and neutral, emphasizing a professional and meticulous design craft. The color palette consists of cool grays, deep blacks, and a vibrant emerald green accent highlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaPZwtZydBl2Bsz2tKgvHrmf8OfNmJl0BXDTBbLXH1FrG5g4EVW4GU4ffItmqRN_UWb-webyc8rc0fYFIybamMaziJl9BaKfUdrgiwQpXPjnbXfE8BR9Yk07vfp_Z-DQ6W0798E-KDCfNvofm-_KKJGhGSf-Pw58lqJnR4emxO70C9JOvEwE8vW1VLCSYA5I226KWHckeo4LlwjjmkVCKq3EFs31XAgbT3VCzQDTUEM0e2QH1vQcPjQgG8PXSQcKNlCGb3xSC8p9I"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-2">E-Commerce Architecture</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">UX Design • React • WebGL</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2024</span>
+</div>
+</div>
+<!-- Small Card -->
+<div class="lg:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-square mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A macro shot of a complex geometric glass sculpture reflecting light in a dark, professional studio environment. The light refracts through the glass, creating sharp, clean spectral lines and emphasizing the precision of the form. The overall aesthetic is one of meticulous technical craft and luxury, with a dark slate and emerald green color theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdqIWbyEosuvsMv1XUl2-0PTaenxQqIewKn-wb76yckLyGtL0H21rT7TOMke9lcpe0pTjFJ2hc4WjrogrzrpYpi0zK8CesNF_TpNy9rOdBp0CnvpHHjCaAD0T6OCfzFFe5lamXkyJ0VBpP9WpPt7up0V4GFOkF-X3n6QtZsFaUnWdAEwICGUisCF4vVYK1a7Jo81vWMvji0dehHY3_WFV2nxxbOIXxbKnc60As4-XqCGt3tgqKvJbcrVNjqutJe_IjaVPyf269Vms"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-2">Branding Identity</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Visual Design • Logo</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2023</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container dark:bg-surface-container-high">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-base">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-display-xl text-headline-lg-mobile text-on-surface tracking-tighter">Portfolio</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Professional Portfolio. All rights reserved.</p>
+</div>
+<div class="flex gap-8 font-label-sm text-label-sm mt-8 md:mt-0">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Theme Toggle Script
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const icon = themeToggle.querySelector('.material-symbols-outlined');
+            if (html.classList.contains('dark')) {
+                icon.innerText = 'light_mode';
+            } else {
+                icon.innerText = 'dark_mode';
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('py-2');
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body></html>

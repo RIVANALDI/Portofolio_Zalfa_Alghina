@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zalfa Alghina Maulida — Portfolio</title>
+<meta name="description" content="Portfolio Zalfa Alghina Maulida — Fresh Graduate Japanese Language Education, Brawijaya University. JLPT N3 Certified. Graphic Designer &amp; Educator."/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;family=Jetbrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+if (typeof tailwind !== 'undefined') {
+    tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed": "#410000", "inverse-primary": "#0062a1", "surface-container-high": "#2a2a2a", "on-background": "#e5e2e1", "on-tertiary-container": "#ff9d8e", "on-primary-fixed-variant": "#00497a", "on-error-container": "#ffdad6", "on-secondary": "#55006b", "error-container": "#93000a", "on-secondary-container": "#f5b8ff", "primary-fixed-dim": "#9ccaff", "on-primary": "#003256", "on-surface": "#e5e2e1", "on-secondary-fixed-variant": "#790096", "on-tertiary-fixed-variant": "#8d160c", "surface-variant": "#353534", "surface-dim": "#131313", "on-secondary-fixed": "#340042", "primary-fixed": "#d0e4ff", "surface-tint": "#9ccaff", secondary: "#f3aeff", "secondary-fixed-dim": "#f3aeff", "inverse-on-surface": "#313030", "on-primary-container": "#7bbcff", "surface-container": "#201f1f", "tertiary-container": "#8f170e", surface: "#131313", "surface-container-lowest": "#0e0e0e", "secondary-fixed": "#fcd6ff", "surface-bright": "#3a3939", background: "#131313", primary: "#9ccaff", error: "#ffb4ab", "on-error": "#690005", "on-surface-variant": "#cdc3d6", "inverse-surface": "#e5e2e1", "on-primary-fixed": "#001d35", "surface-container-highest": "#353534", "outline-variant": "#4b4454", "secondary-container": "#9301b6", outline: "#968d9f", "on-tertiary": "#690000", tertiary: "#ffb4a8", "primary-container": "#004b7d", "surface-container-low": "#1c1b1b", "tertiary-fixed": "#ffdad4", "tertiary-fixed-dim": "#ffb4a8"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {gutter: "24px", "container-max": "1280px", "margin-mobile": "16px", "margin-desktop": "64px", "section-gap": "120px", base: "8px"}, fontFamily: {"display-xl": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "body-md": ["Inter"], "label-sm": ["JetBrains Mono"], headline: ["Hanken Grotesk"], display: ["Hanken Grotesk"], body: ["Inter"], label: ["Jetbrains Mono"]}, fontSize: {"display-xl": ["64px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg": ["40px", {lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600"}], "headline-lg-mobile": ["32px", {lineHeight: "1.2", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "1.5", letterSpacing: "0.05em", fontWeight: "500"}]}}}};
+}
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        /* Theme Variables */
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --surface-color: rgba(255, 255, 255, 0.8);
+            --border-color: rgba(15, 23, 42, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --on-surface: #0f172a;
+            --on-surface-variant: #475569;
+            --surface-container: #ffffff;
+            --surface-container-high: #f1f5f9;
+            --surface-container-highest: #e2e8f0;
+            --primary-container-bg: #e0f2fe;
+            --on-primary-container-text: #0369a1;
+        }
+        
+        .dark {
+            --bg-color: #081425;
+            --text-color: #d8e3fb;
+            --surface-color: rgba(21, 32, 49, 0.8);
+            --border-color: rgba(134, 148, 138, 0.2);
+            --card-bg: rgba(21, 32, 49, 0.7);
+            --on-surface: #e5e2e1;
+            --on-surface-variant: #cdc3d6;
+            --surface-container: #111e30;
+            --surface-container-high: #1b2a3f;
+            --surface-container-highest: #24354f;
+            --primary-container-bg: #004b7d;
+            --on-primary-container-text: #7bbcff;
+        }
+
+        body {
+            background-color: var(--bg-color) !important;
+            color: var(--text-color) !important;
+            overflow-x: hidden;
+        }
+        
+        .bg-background {
+            background-color: var(--bg-color) !important;
+        }
+        .bg-surface\/80 {
+            background-color: var(--surface-color) !important;
+        }
+        .bg-surface\/95 {
+            background-color: var(--surface-color) !important;
+        }
+        .glass-card {
+            background: var(--card-bg) !important;
+            border-color: var(--border-color) !important;
+        }
+        .bg-surface-container {
+            background-color: var(--surface-container) !important;
+        }
+        .bg-surface-container-high {
+            background-color: var(--surface-container-high) !important;
+        }
+        .bg-surface-container-highest {
+            background-color: var(--surface-container-highest) !important;
+        }
+        .bg-primary-container {
+            background-color: var(--primary-container-bg) !important;
+        }
+        
+        .text-on-background {
+            color: var(--text-color) !important;
+        }
+        .text-on-surface {
+            color: var(--on-surface) !important;
+        }
+        .text-on-surface-variant {
+            color: var(--on-surface-variant) !important;
+        }
+        .text-on-primary-container {
+            color: var(--on-primary-container-text) !important;
+        }
+        .border-outline-variant\/30 {
+            border-color: var(--border-color) !important;
+        }
+        .border-outline-variant\/10 {
+            border-color: var(--border-color) !important;
+        }
+        .border-outline-variant\/20 {
+            border-color: var(--border-color) !important;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer-text {
+            background: linear-gradient(90deg, #9ccaff 0%, #f3aeff 50%, #9ccaff 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline-variant/10 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-16 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display-xl text-headline-lg-mobile tracking-tighter text-on-surface dark:text-on-background" href="#">Zalfa Alghina Maulida</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-primary dark:text-primary border-b-2 border-primary pb-1 transition-all duration-300 ease-in-out" href="#">Beranda</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="../tentang_saya_portofolio_profesional/code.html">Tentang Saya</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="../proyek_portofolio_profesional/code.html">Proyek</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="../kontak_portofolio_profesional/code.html">Kontak</a>
+<button class="ml-4 text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="light_mode">light_mode</span>
+</button>
+</nav>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface" id="mobile-menu-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/10 px-4 py-6 space-y-4" id="mobile-menu">
+<a class="block font-label-sm text-label-sm text-primary" href="#">Beranda</a>
+<a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="../tentang_saya_portofolio_profesional/code.html">Tentang Saya</a>
+<a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="../proyek_portofolio_profesional/code.html">Proyek</a>
+<a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="../kontak_portofolio_profesional/code.html">Kontak</a>
+</div>
+</header>
+<main class="pt-16 min-h-screen">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center py-section-gap overflow-hidden">
+<!-- Background Decorative Element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/4 right-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Hero Content -->
+<div class="lg:col-span-7 flex flex-col items-start gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Open to Work — Education &amp; Recruitment
+                    </div>
+<h1 class="font-display-xl text-display-xl max-w-2xl leading-tight">
+                        Menghubungkan <span class="shimmer-text">Bahasa &amp; Budaya</span> Jepang melalui Kreativitas.
+                    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Halo, saya Zalfa! Fresh Graduate Pendidikan Bahasa Jepang dari Universitas Brawijaya. Saya menggabungkan keahlian dalam bahasa Jepang, desain grafis, dan komunikasi lintas budaya untuk menciptakan dampak positif.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="px-8 py-4 bg-primary text-on-primary font-label-sm text-label-sm rounded-[4px] hover:translate-y-[-2px] transition-all duration-300 shadow-lg shadow-primary/20 flex items-center gap-2 group" href="../proyek_portofolio_profesional/code.html">
+                            Lihat Proyek
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="px-8 py-4 border border-outline-variant/30 text-on-surface font-label-sm text-label-sm rounded-[4px] hover:bg-surface-container transition-all duration-300" href="../kontak_portofolio_profesional/code.html">
+                            Hubungi Saya
+                        </a>
+</div>
+<!-- Tech Stack Badge Area -->
+<div class="mt-8 flex items-center gap-6 opacity-60">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Keahlian</span>
+<div class="h-px w-12 bg-outline-variant"></div>
+</div>
+<div class="flex gap-4 grayscale">
+<span class="material-symbols-outlined text-headline-lg-mobile" data-icon="translate">translate</span>
+<span class="material-symbols-outlined text-headline-lg-mobile" data-icon="brush">brush</span>
+<span class="material-symbols-outlined text-headline-lg-mobile" data-icon="school">school</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual (Bento-style layout for imagery) -->
+<div class="lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="relative grid grid-cols-2 gap-4">
+<!-- Main Portrait Card -->
+<div class="col-span-2 glass-card rounded-xl overflow-hidden aspect-[4/5] relative group animate-float">
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60 z-10"></div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Foto profil Zalfa Alghina Maulida" src="../images/profile.png"/>
+<div class="absolute bottom-6 left-6 z-20">
+<p class="font-label-sm text-label-sm text-primary mb-1">日本語教育 • Graphic Design</p>
+<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface">Zalfa Alghina Maulida</h3>
+</div>
+</div>
+<!-- Floating Stat Card 1 -->
+<div class="glass-card p-6 rounded-xl absolute -left-12 top-1/4 z-30 hidden xl:block animate-float" style="animation-delay: 1s">
+<span class="font-display-xl text-primary text-headline-lg">3.85</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">IPK • Cum Laude</p>
+</div>
+<!-- Floating Stat Card 2 -->
+<div class="glass-card p-6 rounded-xl absolute -right-8 bottom-1/4 z-30 hidden xl:block animate-float" style="animation-delay: 2s">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">JLPT N3 Certified</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Skills Highlight Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="glass-card p-6 rounded-xl text-center hover:border-primary/40 transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-3 group-hover:scale-110 transition-transform" data-icon="translate">translate</span>
+<h4 class="font-label-sm text-label-sm text-on-surface mb-1">Bahasa Jepang</h4>
+<p class="text-[11px] text-on-surface-variant">Translasi &amp; Komunikasi</p>
+</div>
+<div class="glass-card p-6 rounded-xl text-center hover:border-primary/40 transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-3 group-hover:scale-110 transition-transform" data-icon="brush">brush</span>
+<h4 class="font-label-sm text-label-sm text-on-surface mb-1">Desain Grafis</h4>
+<p class="text-[11px] text-on-surface-variant">Visual &amp; Branding</p>
+</div>
+<div class="glass-card p-6 rounded-xl text-center hover:border-primary/40 transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-3 group-hover:scale-110 transition-transform" data-icon="school">school</span>
+<h4 class="font-label-sm text-label-sm text-on-surface mb-1">Pengajaran</h4>
+<p class="text-[11px] text-on-surface-variant">Pendidikan Bahasa</p>
+</div>
+<div class="glass-card p-6 rounded-xl text-center hover:border-primary/40 transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-3 group-hover:scale-110 transition-transform" data-icon="public">public</span>
+<h4 class="font-label-sm text-label-sm text-on-surface mb-1">Lintas Budaya</h4>
+<p class="text-[11px] text-on-surface-variant">Pertukaran &amp; Komunikasi</p>
+</div>
+</div>
+</section>
+
+<!-- Featured Section (Brief Preview) -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto" id="projects">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+<div class="max-w-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">Proyek &amp; Pencapaian</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Karya Unggulan</h2>
+</div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary flex items-center gap-2 group transition-colors" href="../proyek_portofolio_profesional/code.html">
+                    Lihat Semua Proyek
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+<!-- Asymmetric Grid for Projects -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+<!-- Large Card -->
+<div class="lg:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-video mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="BabaShiritori Game — Media pembelajaran kosakata Jepang inovatif yang dikembangkan untuk SMK Negeri 2 Malang" src="../images/smk_teaching.png"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-2">BabaShiritori Game</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Educational Game • Gamifikasi • Bahasa Jepang</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2025</span>
+</div>
+</div>
+<!-- Small Card -->
+<div class="lg:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-square mb-6 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="NIHONGO Partners — Program pertukaran pelajar di Osaka, Jepang oleh The Japan Foundation" src="../images/glico_banner.png"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-lg text-headline-lg-mobile mb-2">NIHONGO Partners</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Exchange Program • Osaka, Japan</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2025</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container dark:bg-surface-container-high">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-base">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-display-xl text-headline-lg-mobile text-on-surface tracking-tighter">Zalfa Alghina Maulida</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">&copy; 2025 Zalfa Alghina Maulida. All rights reserved.</p>
+</div>
+<div class="flex gap-8 font-label-sm text-label-sm mt-8 md:mt-0">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/zalfa-alghina-maulida-749548224/" target="_blank">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:z.ghina19@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Theme Toggle Script
+        var themeToggle = document.getElementById('theme-toggle');
+        var htmlEl = document.documentElement;
+        
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                htmlEl.classList.toggle('dark');
+                var icon = themeToggle.querySelector('.material-symbols-outlined');
+                if (htmlEl.classList.contains('dark')) {
+                    icon.innerText = 'light_mode';
+                } else {
+                    icon.innerText = 'dark_mode';
+                }
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            var nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('py-2');
+                nav.classList.remove('shadow-xl');
+            }
+        });
+
+        // Mobile menu toggle
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body></html>
