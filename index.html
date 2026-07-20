@@ -73,6 +73,7 @@
             scroll-behavior: smooth;
             scroll-padding-top: 4rem; /* Offset for fixed navbar */
         }
+        /* smooth continuous scroll */
         
         /* Light Mode Variables override */
         :root {
@@ -184,14 +185,14 @@
     <!-- Top Navigation Bar -->
     <header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline-variant/10 transition-all duration-300 ease-in-out">
         <div class="flex justify-between items-center h-16 px-4 md:px-16 max-w-container-max mx-auto">
-            <a class="font-display-xl text-[20px] md:text-[24px] tracking-tighter text-on-surface dark:text-on-background font-bold" href="#home">Zalfa Alghina Maulida</a>
+            <a class="font-display-xl text-[20px] md:text-[24px] tracking-tighter text-on-surface dark:text-on-background font-bold" href="/zalfa_alghina">Zalfa Alghina Maulida</a>
             
             <!-- Desktop Nav Links -->
             <nav class="hidden md:flex items-center gap-8" id="desktop-nav">
-                <a class="font-label-sm text-label-sm text-primary dark:text-primary border-b-2 border-primary pb-1 transition-all duration-300 ease-in-out" href="#home" data-sec="home">Beranda</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#about" data-sec="about">Tentang Saya</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#projects" data-sec="projects">Proyek</a>
-                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#contact" data-sec="contact">Kontak</a>
+                <a class="font-label-sm text-label-sm transition-colors" href="#home" data-sec="home" data-active>Beranda</a>
+                <a class="font-label-sm text-label-sm transition-colors" href="#about" data-sec="about">Tentang Saya</a>
+                <a class="font-label-sm text-label-sm transition-colors" href="#projects" data-sec="projects">Proyek</a>
+                <a class="font-label-sm text-label-sm transition-colors" href="#contact" data-sec="contact">Kontak</a>
                 <button class="ml-4 text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity" id="theme-toggle-btn">
                     <span class="material-symbols-outlined" data-icon="light_mode">light_mode</span>
                 </button>
@@ -210,10 +211,10 @@
 
         <!-- Mobile Menu Drawer -->
         <div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/10 px-4 py-6 space-y-4" id="mobile-menu">
-            <a class="block font-label-sm text-label-sm text-primary" href="#home" data-sec="home">Beranda</a>
-            <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#about" data-sec="about">Tentang Saya</a>
-            <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#projects" data-sec="projects">Proyek</a>
-            <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#contact" data-sec="contact">Kontak</a>
+            <a class="block font-label-sm text-label-sm transition-colors" href="#home" data-sec="home" data-active>Beranda</a>
+            <a class="block font-label-sm text-label-sm transition-colors" href="#about" data-sec="about">Tentang Saya</a>
+            <a class="block font-label-sm text-label-sm transition-colors" href="#projects" data-sec="projects">Proyek</a>
+            <a class="block font-label-sm text-label-sm transition-colors" href="#contact" data-sec="contact">Kontak</a>
         </div>
     </header>
 
@@ -321,7 +322,7 @@
 
 
         <!-- 2. TENTANG SAYA SECTION (#about) -->
-        <section id="about" class="pt-24 pb-12 md:pb-20 px-4 md:px-16 max-w-container-max mx-auto w-full">
+        <section id="about" class="pt-24 pb-12 md:pb-20 px-4 md:px-16 max-w-container-max mx-auto w-full min-h-screen">
             
             <!-- Biography -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-16 md:mb-24">
@@ -639,7 +640,7 @@
 
 
         <!-- 3. PROYEK SECTION (#projects) -->
-        <section id="projects" class="pt-24 pb-12 md:pb-20 px-4 md:px-16 max-w-container-max mx-auto w-full">
+        <section id="projects" class="pt-24 pb-12 md:pb-20 px-4 md:px-16 max-w-container-max mx-auto w-full min-h-screen">
             <!-- Hero Header -->
             <header class="mb-6 md:mb-10 max-w-2xl">
                 <h2 class="font-display-xl font-bold text-[32px] md:text-display-xl text-on-surface mb-base">Proyek &amp; Pencapaian</h2>
@@ -777,7 +778,7 @@
 
 
         <!-- 4. KONTAK SECTION (#contact) -->
-        <section id="contact" class="pt-24 pb-12 md:pb-20 px-4 md:px-16 max-w-container-max mx-auto w-full">
+        <section id="contact" class="pt-24 pb-12 md:pb-20 px-4 md:px-16 max-w-container-max mx-auto w-full min-h-screen">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
                 
                 <!-- Left Column: Branding & Info -->
@@ -976,12 +977,12 @@
         }
 
         // Close lightbox when clicking outside the image
-        document.getElementById('lightbox').addEventListener('click', (e) => {
-            if (e.target.id === 'lightbox' || e.target.id === 'lightbox-img') {
-                // Clicking container or image background closes it
+        const _lb = document.getElementById('lightbox');
+        if (_lb) {
+            _lb.addEventListener('click', (e) => {
                 if (e.target.id === 'lightbox') closeLightbox();
-            }
-        });
+            });
+        }
 
         // 4. Contact Form Submission simulation
         document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -998,45 +999,51 @@
         // 5. Scrollspy Logic & Nav Highlights
         (() => {
             const sections = document.querySelectorAll('section[id]');
-            const desktopNavLinks = document.querySelectorAll('#desktop-nav a[data-sec]');
-            const mobileNavLinks = document.querySelectorAll('#mobile-menu a[data-sec]');
-            
+            const allNavLinks = document.querySelectorAll('#desktop-nav a[data-sec], #mobile-menu a[data-sec]');
+
+            // Clear any leftover inline styles from previous iterations
+            allNavLinks.forEach(l => { l.style.cssText = ''; l.removeAttribute('data-active'); });
+
+            function setActiveLink(secId) {
+                allNavLinks.forEach(link => {
+                    if (link.getAttribute('data-sec') === secId) {
+                        link.classList.add('nav-active');
+                    } else {
+                        link.classList.remove('nav-active');
+                    }
+                });
+            }
+
+            // IntersectionObserver
+            let currentVisible = 'home';
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        currentVisible = entry.target.id;
+                        setActiveLink(currentVisible);
+                    }
+                });
+            }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+            sections.forEach(sec => observer.observe(sec));
+
+            // Scroll fallback
             window.addEventListener('scroll', () => {
-                let currentSec = '';
-                const scrollPos = window.scrollY + 200; // Offset for navbar trigger
-
-                sections.forEach(section => {
-                    const top = section.offsetTop;
-                    const height = section.offsetHeight;
-                    if (scrollPos >= top && scrollPos < top + height) {
-                        currentSec = section.getAttribute('id');
-                    }
-                });
-
-                if (!currentSec && scrollPos < 500) {
-                    currentSec = 'home';
+                let best = 'home';
+                const mid = window.scrollY + window.innerHeight / 2;
+                sections.forEach(s => { if (s.offsetTop <= mid) best = s.id; });
+                if (best !== currentVisible) {
+                    currentVisible = best;
+                    setActiveLink(currentVisible);
                 }
+            }, { passive: true });
 
-                // Update Desktop Links
-                desktopNavLinks.forEach(link => {
-                    link.classList.remove('text-primary', 'dark:text-primary', 'border-b-2', 'border-primary', 'pb-1');
-                    link.classList.add('text-on-surface-variant');
-                    if (link.getAttribute('data-sec') === currentSec) {
-                        link.classList.remove('text-on-surface-variant');
-                        link.classList.add('text-primary', 'dark:text-primary', 'border-b-2', 'border-primary', 'pb-1');
-                    }
-                });
-
-                // Update Mobile Links
-                mobileNavLinks.forEach(link => {
-                    link.classList.remove('text-primary');
-                    link.classList.add('text-on-surface-variant');
-                    if (link.getAttribute('data-sec') === currentSec) {
-                        link.classList.remove('text-on-surface-variant');
-                        link.classList.add('text-primary');
-                    }
-                });
+            // Click: instant highlight
+            allNavLinks.forEach(link => {
+                link.addEventListener('click', () => setActiveLink(link.getAttribute('data-sec')));
             });
+
+            // Init
+            setActiveLink('home');
         })();
 
         // 6. Micro-interactions for project cards hover mouse movements
@@ -1052,5 +1059,22 @@
             }
         });
     </script>
+    <!-- Nav Active State CSS (placed LAST to guarantee highest cascade priority) -->
+    <style id="nav-active-css">
+        /* Base nav link state */
+        header nav#desktop-nav a[data-sec],
+        header div#mobile-menu a[data-sec] {
+            color: var(--on-surface-variant, #475569) !important;
+            border-bottom: 2px solid transparent !important;
+            padding-bottom: 4px !important;
+            transition: color 0.25s ease, border-color 0.25s ease;
+        }
+        /* Active nav link state — selector specificity is very high */
+        header nav#desktop-nav a[data-sec].nav-active,
+        header div#mobile-menu a[data-sec].nav-active {
+            color: var(--primary-color, #9ccaff) !important;
+            border-bottom-color: var(--primary-color, #9ccaff) !important;
+        }
+    </style>
 </body>
 </html>
