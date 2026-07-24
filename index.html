@@ -390,7 +390,7 @@
                             onclick="openLightbox('./images/profile_yukata.jpg', 'Zalfa Alghina Maulida — Profile Photo in Yukata')">
                             <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60 z-10">
                             </div>
-                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
+                            <img fetchpriority="high" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
                                 alt="Profile photo of Zalfa Alghina Maulida in Yukata"
                                 src="./images/profile_yukata.jpg" style="object-position: center 25%;" />
                             <div
@@ -492,7 +492,7 @@
                 <div class="lg:col-span-5 order-1 lg:order-2 flex justify-end">
                     <div class="relative w-full aspect-[4/5] bg-surface-container rounded-xl overflow-hidden group cursor-pointer"
                         onclick="openLightbox('./images/graduation_ceremony.jpg', 'Zalfa Alghina Maulida — Wisuda di Universitas Brawijaya')">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             alt="Zalfa Alghina Maulida — Wisuda di Universitas Brawijaya"
                             src="./images/graduation_ceremony.jpg" style="object-position: center top;" />
                         <div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
@@ -722,21 +722,21 @@
                         
                         <div class="grid grid-cols-3 gap-2 mb-2">
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('himapbj2024', 0)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="HIMAPBJ 2024 Executive Board" src="./images/himapbj_2024_stairs.jpg"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="HIMAPBJ 2024 Executive Board" src="./images/himapbj_2024_stairs.jpg"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-2xl">zoom_in</span>
                                 </div>
                                 <div class="absolute bottom-1 left-1 bg-black/60 text-white text-[8px] px-1 py-0.5 rounded font-label-sm">Executive Team</div>
                             </div>
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('himapbj2024', 1)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="HIMAPBJ 2024 Team" src="./images/himapbj_2024_group.jpg"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="HIMAPBJ 2024 Team" src="./images/himapbj_2024_group.jpg"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-2xl">zoom_in</span>
                                 </div>
                                 <div class="absolute bottom-1 left-1 bg-black/60 text-white text-[8px] px-1 py-0.5 rounded font-label-sm">Field Team</div>
                             </div>
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('himapbj2024', 2)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate HIMAPBJ 2024" src="./images/cert_himapbj_2024.png"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate HIMAPBJ 2024" src="./images/cert_himapbj_2024.png"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-2xl">zoom_in</span>
                                 </div>
@@ -756,14 +756,14 @@
                         
                         <div class="grid grid-cols-2 gap-3 mb-2">
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('nikoshiki2024', 0)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Organizing Committee Nikoshiki 2024" src="./images/nikoshiki_2024_group.jpg"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Organizing Committee Nikoshiki 2024" src="./images/nikoshiki_2024_group.jpg"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
                                 </div>
                                 <div class="absolute bottom-1 left-1 bg-black/60 text-white text-[9px] px-1.5 py-0.5 rounded font-label-sm">Committee</div>
                             </div>
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('nikoshiki2024', 1)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate Nikoshiki 2024" src="./images/cert_nikoshiki_2024.png"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate Nikoshiki 2024" src="./images/cert_nikoshiki_2024.png"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
                                 </div>
@@ -783,14 +783,14 @@
                         
                         <div class="grid grid-cols-2 gap-3 mb-2">
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('himapbj2023', 0)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="HIMAPBJ 2023 Executive Board" src="./images/himapbj_2023_group.jpg"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="HIMAPBJ 2023 Executive Board" src="./images/himapbj_2023_group.jpg"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
                                 </div>
                                 <div class="absolute bottom-1 left-1 bg-black/60 text-white text-[9px] px-1.5 py-0.5 rounded font-label-sm">Team Photo</div>
                             </div>
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('himapbj2023', 1)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate HIMAPBJ 2023" src="./images/cert_himapbj_2023.png"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate HIMAPBJ 2023" src="./images/cert_himapbj_2023.png"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
                                 </div>
@@ -810,14 +810,14 @@
                         
                         <div class="grid grid-cols-2 gap-3 mb-2">
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('nikoshiki2023', 0)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Organizing Committee Nikoshiki 2023" src="./images/nikoshiki_2023_group.jpg"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Organizing Committee Nikoshiki 2023" src="./images/nikoshiki_2023_group.jpg"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
                                 </div>
                                 <div class="absolute bottom-1 left-1 bg-black/60 text-white text-[9px] px-1.5 py-0.5 rounded font-label-sm">Committee</div>
                             </div>
                             <div class="aspect-[4/3] overflow-hidden rounded-lg bg-surface-dim relative cursor-pointer group/img" onclick="openGalleryLightbox('nikoshiki2023', 1)">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate Nikoshiki 2023" src="./images/cert_nikoshiki_2023.png"/>
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" alt="Official Certificate Nikoshiki 2023" src="./images/cert_nikoshiki_2023.png"/>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-white text-3xl">zoom_in</span>
                                 </div>
@@ -880,7 +880,7 @@
                             <div class="grid grid-cols-2 gap-3 max-w-md mb-4">
                                 <div class="aspect-[4/3] overflow-hidden rounded-lg border border-outline-variant/30 group/img cursor-pointer relative"
                                     onclick="openGalleryLightbox('smkTeaching', 0)">
-                                    <img src="./images/smk_perpustakaan_team.jpg"
+                                    <img decoding="async" loading="lazy" src="./images/smk_perpustakaan_team.jpg"
                                         alt="Tim P4 UB di Perpustakaan SMKN 2 Malang"
                                         class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" />
                                     <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -889,7 +889,7 @@
                                 </div>
                                 <div class="aspect-[4/3] overflow-hidden rounded-lg border border-outline-variant/30 group/img cursor-pointer relative"
                                     onclick="openGalleryLightbox('smkTeaching', 1)">
-                                    <img src="./images/teaching_whiteboard.jpg"
+                                    <img decoding="async" loading="lazy" src="./images/teaching_whiteboard.jpg"
                                         alt="Pengajaran Bahasa Jepang di SMKN 2 Malang"
                                         class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" />
                                     <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -898,7 +898,7 @@
                                 </div>
                                 <div class="aspect-[4/3] overflow-hidden rounded-lg border border-outline-variant/30 group/img cursor-pointer relative"
                                     onclick="openGalleryLightbox('smkTeaching', 2)">
-                                    <img src="./images/smk_eval_meeting.jpg"
+                                    <img decoding="async" loading="lazy" src="./images/smk_eval_meeting.jpg"
                                         alt="Rapat Evaluasi Magang P4 SMKN 2 Malang"
                                         class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" />
                                     <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -907,7 +907,7 @@
                                 </div>
                                 <div class="aspect-[4/3] overflow-hidden rounded-lg border border-outline-variant/30 group/img cursor-pointer relative"
                                     onclick="openGalleryLightbox('smkTeaching', 3)">
-                                    <img src="./images/p4_team_ub.jpg" alt="Tim P4 Pendidikan Bahasa Jepang UB"
+                                    <img decoding="async" loading="lazy" src="./images/p4_team_ub.jpg" alt="Tim P4 Pendidikan Bahasa Jepang UB"
                                         class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" />
                                     <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                         <span class="material-symbols-outlined text-white text-2xl">zoom_in</span>
@@ -1053,7 +1053,7 @@
                         <!-- Slides -->
                         <div class="baba-slide absolute inset-0 transition-opacity duration-700 opacity-100 cursor-pointer"
                             onclick="openGalleryLightbox('baba', 0)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="Penyerahan Game Card &amp; Petunjuk Permainan BabaShiritori"
                                 src="./images/babashiritori_presentation_hd.jpg" />
                             <div
@@ -1064,7 +1064,7 @@
                         </div>
                         <div class="baba-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('baba', 1)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="Tim P4 Pendidikan Bahasa Jepang UB di SMKN 2 Malang"
                                 src="./images/p4_team_ub.jpg" />
                             <div
@@ -1075,7 +1075,7 @@
                         </div>
                         <div class="baba-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('baba', 2)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="Pengajaran Bahasa Jepang di Kelas SMKN 2 Malang"
                                 src="./images/teaching_whiteboard.jpg" />
                             <div
@@ -1137,7 +1137,7 @@
                         <!-- Slides -->
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-100 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 0)">
-                            <img class="w-full h-full object-cover" alt="NIHONGO Partners — Osaka Castle (Osaka-jo)"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover" alt="NIHONGO Partners — Osaka Castle (Osaka-jo)"
                                 src="./images/osaka_castle_portrait.jpg" />
                             <div
                                 class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent p-4">
@@ -1147,7 +1147,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 1)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Shodō (Japanese Calligraphy) group session"
                                 src="./images/nihongo_shodo_group.jpg" />
                             <div
@@ -1158,7 +1158,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 2)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Practicing shodō calligraphy"
                                 src="./images/nihongo_shodo_practice.jpg" />
                             <div
@@ -1169,7 +1169,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 3)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Cross-cultural geography workshop"
                                 src="./images/nihongo_workshop_map.jpg" />
                             <div
@@ -1180,7 +1180,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 4)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Expo 2025 Osaka Gundam Pavilion"
                                 src="./images/nihongo_gundam.jpg" />
                             <div
@@ -1191,7 +1191,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 5)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Expo 2025 Osaka Spain Pavilion"
                                 src="./images/nihongo_spain_pavilion.jpg" />
                             <div
@@ -1202,7 +1202,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 6)">
-                            <img class="w-full h-full object-cover" alt="NIHONGO Partners — Japan &amp; ASEAN flags"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover" alt="NIHONGO Partners — Japan &amp; ASEAN flags"
                                 src="./images/nihongo_flags.jpg" />
                             <div
                                 class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent p-4">
@@ -1212,7 +1212,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 7)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Cultural site monument in Japan"
                                 src="./images/nihongo_monument.jpg" />
                             <div
@@ -1223,7 +1223,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 8)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — International student welcome gathering"
                                 src="./images/nihongo_sushi_party.jpg" />
                             <div
@@ -1234,7 +1234,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 9)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Japan coastal bridge excursion"
                                 src="./images/nihongo_bridge_selfie.jpg" />
                             <div
@@ -1245,7 +1245,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 10)">
-                            <img class="w-full h-full object-cover" alt="NIHONGO Partners — Cultural excursion to Nara"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover" alt="NIHONGO Partners — Cultural excursion to Nara"
                                 src="./images/nihongo_nara_excursion.jpg" />
                             <div
                                 class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
@@ -1255,7 +1255,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 11)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="NIHONGO Partners — Closing ceremony presentation"
                                 src="./images/nihongo_closing_ceremony.jpg" />
                             <div
@@ -1266,7 +1266,7 @@
                         </div>
                         <div class="nihongo-slide absolute inset-0 transition-opacity duration-700 opacity-0 cursor-pointer"
                             onclick="openGalleryLightbox('nihongo', 12)">
-                            <img class="w-full h-full object-cover"
+                            <img decoding="async" loading="lazy" class="w-full h-full object-cover"
                                 alt="Official Certificate of Completion — NIHONGO Partners Spring Program 2025"
                                 src="./images/certificate_nihongo.png" />
                             <div
@@ -1346,14 +1346,14 @@
                             <!-- Slide 1 -->
                             <div class="nikoshiki-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 cursor-pointer"
                                 onclick="openGalleryLightbox('nikoshiki', 0)">
-                                <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/img:scale-105"
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/img:scale-105"
                                     alt="Panitia Nikoga no Nyuugakushiki 2024"
                                     src="./images/nikoshiki_2024_group.jpg" />
                             </div>
                             <!-- Slide 2 -->
                             <div class="nikoshiki-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 cursor-pointer"
                                 onclick="openGalleryLightbox('nikoshiki', 1)">
-                                <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/img:scale-105"
+                                <img decoding="async" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/img:scale-105"
                                     alt="Panitia Nikoga no Nyuugakushiki 2023 Indoor"
                                     src="./images/nikoshiki_2023_indoor.jpg" />
                             </div>
@@ -1403,7 +1403,7 @@
                     <div>
                         <div class="aspect-[3/4] overflow-hidden relative cursor-pointer group/img"
                             onclick="openLightbox('./images/himapbj_medtek_team.jpg', 'Media &amp; Technology Team — HIMAPBJ FIB UB (NIKOGA)')">
-                            <img class="project-image w-full h-full object-cover transition-transform duration-700 ease-out group-hover/img:scale-105"
+                            <img decoding="async" loading="lazy" class="project-image w-full h-full object-cover transition-transform duration-700 ease-out group-hover/img:scale-105"
                                 alt="Tim Staf Media &amp; Teknologi HIMAPBJ FIB UB"
                                 src="./images/himapbj_medtek_team.jpg" style="object-position: center top;" />
                             <div
