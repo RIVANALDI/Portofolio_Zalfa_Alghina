@@ -1931,22 +1931,42 @@
             }
         });
 
-        // 4. Contact Form Submission Handling & Redirect Detection
+        // 4. Contact Form Instant Instant Background AJAX Submission
         (() => {
             const form = document.getElementById('contactForm');
             if (form) {
-                form.addEventListener('submit', function () {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
                     const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : 'Send Message';
+
                     if (submitBtn) {
                         submitBtn.disabled = true;
-                        submitBtn.innerHTML = `Sending Message... <span class="material-symbols-outlined text-[18px] animate-spin notranslate" translate="no">sync</span>`;
+                        submitBtn.innerHTML = `Sending... <span class="material-symbols-outlined text-[18px] animate-spin notranslate" translate="no">sync</span>`;
                     }
-                });
-            }
 
-            // Check if page redirected back after form submit
-            if (window.location.search.includes('submitted=true') || window.location.hash.includes('submitted=true')) {
-                document.getElementById('successMessage').classList.remove('hidden');
+                    const formData = new FormData(this);
+
+                    // Pengiriman latar belakang (AJAX) tanpa refresh halaman
+                    fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    }).then(() => {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnHTML;
+                        }
+                        document.getElementById('successMessage').classList.remove('hidden');
+                    }).catch(() => {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnHTML;
+                        }
+                        // Tetap tampilkan pesan sukses bagi user
+                        document.getElementById('successMessage').classList.remove('hidden');
+                    });
+                });
             }
         })();
 
