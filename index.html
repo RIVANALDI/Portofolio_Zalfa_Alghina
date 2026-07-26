@@ -1583,6 +1583,7 @@
                             <input type="hidden" name="_subject" value="New Portfolio Message for Zalfa!">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="http://localhost:3000/?submitted=true#contact">
                             <input type="hidden" name="_autoresponse" value="Thank you for contacting Zalfa Alghina Maulida! I have received your message and will reply shortly.">
 
                             <div class="space-y-5">
@@ -1930,14 +1931,24 @@
             }
         });
 
-        // 4. Contact Form Submission Handling
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            const submitBtn = this.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = `Sending Message... <span class="material-symbols-outlined text-[18px] animate-spin notranslate" translate="no">sync</span>`;
+        // 4. Contact Form Submission Handling & Redirect Detection
+        (() => {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function () {
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = `Sending Message... <span class="material-symbols-outlined text-[18px] animate-spin notranslate" translate="no">sync</span>`;
+                    }
+                });
             }
-        });
+
+            // Check if page redirected back after form submit
+            if (window.location.search.includes('submitted=true') || window.location.hash.includes('submitted=true')) {
+                document.getElementById('successMessage').classList.remove('hidden');
+            }
+        })();
 
         function resetForm() {
             document.getElementById('contactForm').reset();
