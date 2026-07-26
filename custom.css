@@ -1,0 +1,217 @@
+/* ==========================================
+   Stitch Professional Portfolio - Master CSS
+   ========================================== */
+
+/* 1. Base & Smooth Scroll Settings */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem; /* Padding pas saat scroll navigasi agar tidak tertutup header */
+}
+
+/* 2. Dynamic Light & Dark Mode CSS Variables */
+:root {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --surface-color: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(148, 163, 184, 0.25);
+    --card-bg: #ffffff;
+    --on-surface: #0f172a;
+    --on-surface-variant: #475569;
+    --surface-container: #ffffff;
+    --surface-container-high: #f1f5f9;
+    --surface-container-highest: #e2e8f0;
+    --surface-variant: #e0f2fe;
+    --primary-container-bg: #e0f2fe;
+    --on-primary-container-text: #0284c7;
+    --primary-color: #0062a1; /* High contrast untuk Light Mode */
+    --glow-color: rgba(2, 132, 199, 0.15);
+}
+
+.dark {
+    --bg-color: #081425;
+    --text-color: #e2e8f0;
+    --surface-color: rgba(8, 20, 37, 0.88);
+    --border-color: rgba(56, 189, 248, 0.18);
+    --card-bg: #0f1f35;
+    --on-surface: #f8fafc;
+    --on-surface-variant: #94a3b8;
+    --surface-container: #0f1f35;
+    --surface-container-high: #162a45;
+    --surface-container-highest: #1e3a5f;
+    --surface-variant: #1e293b;
+    --primary-container-bg: #0369a1;
+    --on-primary-container-text: #e0f2fe;
+    --primary-color: #9ccaff; /* High contrast untuk Dark Mode */
+    --glow-color: rgba(56, 189, 248, 0.15);
+}
+
+/* 3. Navigation Header & Active Indicator Animations */
+header {
+    background-color: var(--surface-color) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+header nav#desktop-nav a[data-sec],
+header div#mobile-menu a[data-sec] {
+    color: var(--on-surface-variant) !important;
+    position: relative;
+    padding-bottom: 6px !important;
+    transition: color 0.25s ease;
+    text-decoration: none !important;
+}
+
+/* Indicator animasi underline modern */
+header nav#desktop-nav a[data-sec]::after,
+header div#mobile-menu a[data-sec]::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 2px;
+}
+
+header nav#desktop-nav a[data-sec]:hover,
+header div#mobile-menu a[data-sec]:hover {
+    color: var(--primary-color) !important;
+}
+
+header nav#desktop-nav a[data-sec].nav-active,
+header div#mobile-menu a[data-sec].nav-active {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
+
+header nav#desktop-nav a[data-sec].nav-active::after,
+header div#mobile-menu a[data-sec].nav-active::after {
+    transform: scaleX(1);
+}
+
+/* 4. Custom Text Selection Highlight */
+::selection {
+    background-color: rgba(56, 189, 248, 0.25);
+    color: var(--primary-color);
+}
+
+/* 5. Ambient Radial Background Glow */
+body::before {
+    content: "";
+    position: fixed;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, var(--glow-color) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 6. Card Hover Elevation & Smooth Micro-Interactions */
+.bg-surface-container {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.3s ease;
+}
+
+.bg-surface-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -10px var(--glow-color);
+}
+
+/* 7. Status Pulse Animation */
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+.status-dot-pulse {
+    animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* 8. Gradient Text Effect */
+.text-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 9. Theme Bridge Utilities (Overrides untuk Tailwind Classes) */
+html:not(.dark) body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+html:not(.dark) .bg-background {
+    background-color: var(--bg-color) !important;
+}
+
+html:not(.dark) .bg-surface-container {
+    background-color: var(--card-bg) !important;
+}
+
+html:not(.dark) .bg-surface-container-high {
+    background-color: var(--surface-container-high) !important;
+}
+
+html:not(.dark) .bg-surface-container-highest {
+    background-color: var(--surface-container-highest) !important;
+}
+
+html:not(.dark) .bg-surface-variant {
+    background-color: var(--surface-variant) !important;
+}
+
+html:not(.dark) .text-on-surface {
+    color: var(--on-surface) !important;
+}
+
+html:not(.dark) .text-on-surface-variant {
+    color: var(--on-surface-variant) !important;
+}
+
+html:not(.dark) .text-primary {
+    color: var(--primary-color) !important;
+}
+
+html:not(.dark) .from-surface {
+    --tw-gradient-from: var(--card-bg) !important;
+    --tw-gradient-to: rgba(255, 255, 255, 0) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html:not(.dark) .border-outline-variant\/30,
+html:not(.dark) .border-outline-variant\/20,
+html:not(.dark) .border-outline-variant\/15 {
+    border-color: var(--border-color) !important;
+}
+
+/* 10. Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}

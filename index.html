@@ -73,6 +73,9 @@
         }
     </script>
 
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="custom.css">
+
     <!-- Custom CSS Styles -->
     <style>
         html {
@@ -258,27 +261,6 @@
             animation: shimmer 5s linear infinite;
         }
 
-        /* Nav link states */
-        header nav#desktop-nav a[data-sec],
-        header div#mobile-menu a[data-sec] {
-            color: var(--on-surface-variant) !important;
-            border-bottom: 2px solid transparent !important;
-            padding-bottom: 4px !important;
-            transition: color 0.2s ease, border-color 0.2s ease;
-        }
-
-        header nav#desktop-nav a[data-sec]:hover,
-        header div#mobile-menu a[data-sec]:hover {
-            color: var(--primary-color) !important;
-        }
-
-        header nav#desktop-nav a[data-sec].nav-active,
-        header div#mobile-menu a[data-sec].nav-active {
-            color: var(--primary-color) !important;
-            border-bottom: 2px solid var(--primary-color) !important;
-            border-bottom-color: var(--primary-color) !important;
-            font-weight: 700 !important;
-        }
     </style>
 </head>
 
@@ -536,6 +518,63 @@
                     <div class="font-label-sm text-label-sm text-primary tracking-tighter uppercase font-bold">/ SKILLS
                         2025</div>
                 </div>
+
+                <!-- 3 Language Columns Grid -->
+                <div class="mb-12">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- 1. Indonesian -->
+                        <div class="bg-surface-container border border-outline-variant/30 p-6 rounded-xl hover:border-primary/50 transition-all flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-3xl">🇮🇩</span>
+                                    <span class="px-2.5 py-1 bg-primary/10 text-primary font-label-sm text-[10px] uppercase font-bold rounded-full border border-primary/20">Native / Bilingual</span>
+                                </div>
+                                <h4 class="font-headline-lg text-lg text-on-surface font-bold mb-1">Indonesian</h4>
+                                <p class="text-xs text-primary font-bold mb-3">Native or bilingual proficiency</p>
+                                <p class="text-on-surface-variant text-xs leading-relaxed mb-4">First-language mastery in professional corporate communication, formal correspondence, and document drafting.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-outline-variant/15">
+                                <span class="px-2 py-0.5 bg-background border border-outline-variant/30 font-label-sm text-[9px] uppercase rounded">Native</span>
+                                <span class="px-2 py-0.5 bg-background border border-outline-variant/30 font-label-sm text-[9px] uppercase rounded">Corporate</span>
+                            </div>
+                        </div>
+
+                        <!-- 2. Japanese -->
+                        <div class="bg-surface-container border border-outline-variant/30 p-6 rounded-xl hover:border-primary/50 transition-all flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-3xl">🇯🇵</span>
+                                    <span class="px-2.5 py-1 bg-primary/10 text-primary font-label-sm text-[10px] uppercase font-bold rounded-full border border-primary/20">JLPT N3 Certified</span>
+                                </div>
+                                <h4 class="font-headline-lg text-lg text-on-surface font-bold mb-1">Japanese</h4>
+                                <p class="text-xs text-primary font-bold mb-3">Limited working proficiency</p>
+                                <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Certified JLPT N3 by The Japan Foundation. Skilled in business translation, pedagogy, and intercultural dialogue.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-outline-variant/15">
+                                <span class="px-2 py-0.5 bg-background border border-outline-variant/30 font-label-sm text-[9px] uppercase text-primary font-bold rounded">JLPT N3</span>
+                                <span class="px-2 py-0.5 bg-background border border-outline-variant/30 font-label-sm text-[9px] uppercase rounded">Translation</span>
+                            </div>
+                        </div>
+
+                        <!-- 3. English -->
+                        <div class="bg-surface-container border border-outline-variant/30 p-6 rounded-xl hover:border-primary/50 transition-all flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-3xl">🇬🇧</span>
+                                    <span class="px-2.5 py-0.5 bg-primary/10 text-primary font-label-sm text-[10px] uppercase font-bold rounded-full border border-primary/20">Professional</span>
+                                </div>
+                                <h4 class="font-headline-lg text-lg text-on-surface font-bold mb-1">English</h4>
+                                <p class="text-xs text-primary font-bold mb-3">Limited working proficiency</p>
+                                <p class="text-on-surface-variant text-xs leading-relaxed mb-4">Capable in professional workplace English, written correspondence, and international program exchange.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-outline-variant/15">
+                                <span class="px-2 py-0.5 bg-background border border-outline-variant/30 font-label-sm text-[9px] uppercase rounded">Workplace English</span>
+                                <span class="px-2 py-0.5 bg-background border border-outline-variant/30 font-label-sm text-[9px] uppercase rounded">Global</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- 1. Japanese Language -->
                     <div
@@ -1539,9 +1578,13 @@
                                 get back to you promptly.</p>
                         </div>
 
-                        <form class="space-y-6 relative z-10" id="contactForm" action="https://formsubmit.co/z.ghina19@gmail.com" method="POST">
+                        <form class="space-y-6 relative z-10" id="contactForm" action="https://formsubmit.co/anzaevotsura@gmail.com" method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Portfolio Message for Zalfa!">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_autoresponse" value="Thank you for contacting Zalfa Alghina Maulida! I have received your message and will reply shortly.">
+
                             <div class="space-y-5">
                                 <div class="group/field">
                                     <label
@@ -1566,12 +1609,11 @@
                                     <select
                                         class="w-full bg-surface-container-highest border-0 border-b border-outline-variant focus:border-primary focus:ring-0 focus:bg-surface-container-high transition-all py-3.5 px-5 text-on-surface font-body-md rounded-t-lg"
                                         id="subject" name="subject">
-                                        <option value="">Select a subject...</option>
-                                        <option value="education">Education Opportunity</option>
-                                        <option value="design">Graphic Design Project</option>
-                                        <option value="translation">Japanese Translation</option>
-                                        <option value="recruitment">Recruitment</option>
-                                        <option value="collaboration">Other Collaboration</option>
+                                        <option value="Education Opportunity">Education Opportunity</option>
+                                        <option value="Graphic Design Project">Graphic Design Project</option>
+                                        <option value="Japanese Translation">Japanese Translation</option>
+                                        <option value="Recruitment Inquiry">Recruitment Inquiry</option>
+                                        <option value="Other Collaboration">Other Collaboration</option>
                                     </select>
                                 </div>
                                 <div class="group/field">
@@ -1888,53 +1930,13 @@
             }
         });
 
-        // 4. Contact Form Submission (100% Background AJAX Email Delivery)
+        // 4. Contact Form Submission Handling
         document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const form = this;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnHTML = submitBtn ? submitBtn.innerHTML : 'Send Message';
-
-            const nameInput = document.getElementById('name').value.trim();
-            const emailInput = document.getElementById('email').value.trim();
-            const subjectSelect = document.getElementById('subject');
-            const subjectText = subjectSelect.options[subjectSelect.selectedIndex]?.text || 'Portfolio Inquiry';
-            const messageInput = document.getElementById('message').value.trim();
-
+            const submitBtn = this.querySelector('button[type="submit"]');
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = `Sending... <span class="material-symbols-outlined text-[18px] animate-spin notranslate" translate="no">sync</span>`;
+                submitBtn.innerHTML = `Sending Message... <span class="material-symbols-outlined text-[18px] animate-spin notranslate" translate="no">sync</span>`;
             }
-
-            const formData = new FormData();
-            formData.append('name', nameInput);
-            formData.append('email', emailInput);
-            formData.append('subject', subjectText);
-            formData.append('_subject', `Portfolio Inquiry [${subjectText}] from ${nameInput}`);
-            formData.append('message', messageInput);
-            formData.append('_captcha', 'false');
-
-            // Send 100% silently in background to FormSubmit AJAX API
-            fetch('https://formsubmit.co/ajax/z.ghina19@gmail.com', {
-                method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: formData
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalBtnHTML;
-                }
-                document.getElementById('successMessage').classList.remove('hidden');
-            })
-            .catch(() => {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalBtnHTML;
-                }
-                document.getElementById('successMessage').classList.remove('hidden');
-            });
         });
 
         function resetForm() {
@@ -1942,79 +1944,90 @@
             document.getElementById('successMessage').classList.add('hidden');
         }
 
-        // 5. Scrollspy Logic & Nav Highlights (Flawless Viewport Bound Trigger)
+        // 5. Scrollspy Navigation Indicator (Glitch-Free Click & Scroll Lock)
         (() => {
+            const navLinks = document.querySelectorAll('header nav#desktop-nav a[data-sec], header div#mobile-menu a[data-sec]');
             const secIds = ['home', 'about', 'certificates', 'projects', 'contact'];
-            const allNavLinks = document.querySelectorAll('#desktop-nav a[data-sec], #mobile-menu a[data-sec]');
-            let isClicking = false;
-            let clickTimer = null;
-
-            allNavLinks.forEach(l => { l.style.cssText = ''; l.removeAttribute('data-active'); });
+            let activeTargetSec = null;
+            let unlockTimeout = null;
 
             function setActiveLink(secId) {
-                allNavLinks.forEach(link => {
-                    if (link.getAttribute('data-sec') === secId) {
-                        link.classList.add('nav-active');
-                    } else {
-                        link.classList.remove('nav-active');
-                    }
+                navLinks.forEach(link => {
+                    link.classList.toggle('nav-active', link.getAttribute('data-sec') === secId);
                 });
             }
 
-            function updateScrollspy() {
-                if (isClicking) return;
-                let current = 'home';
-                const triggerPoint = window.innerHeight * 0.35;
+            function updateActiveSection() {
+                // Jika sedang meluncur setelah diklik, PAKSA tetap aktif di seksi target (100% Bebas Glitch)
+                if (activeTargetSec) {
+                    setActiveLink(activeTargetSec);
+                    return;
+                }
 
-                // Special case for bottom of page (Contact section)
-                if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 60)) {
-                    current = 'contact';
-                } else {
-                    for (let i = 0; i < secIds.length; i++) {
-                        const el = document.getElementById(secIds[i]);
-                        if (el) {
-                            const rect = el.getBoundingClientRect();
-                            if (rect.top <= triggerPoint && rect.bottom > 100) {
-                                current = secIds[i];
-                            }
+                const scrollY = window.scrollY || window.pageYOffset;
+                const windowHeight = window.innerHeight;
+                const docHeight = document.documentElement.scrollHeight;
+
+                if (scrollY < 60) {
+                    setActiveLink('home');
+                    return;
+                }
+
+                if (scrollY + windowHeight >= docHeight - 40) {
+                    setActiveLink('contact');
+                    return;
+                }
+
+                const headerOffset = 160;
+                let currentSec = 'home';
+
+                for (let i = 0; i < secIds.length; i++) {
+                    const sec = document.getElementById(secIds[i]);
+                    if (sec) {
+                        const top = sec.offsetTop - headerOffset;
+                        if (scrollY >= top) {
+                            currentSec = secIds[i];
                         }
                     }
                 }
-                setActiveLink(current);
+
+                setActiveLink(currentSec);
             }
 
-            window.addEventListener('scroll', updateScrollspy, { passive: true });
-            window.addEventListener('resize', updateScrollspy, { passive: true });
+            // Tangkap semua klik link jangkar dan kuiskan targetnya tanpa ampun
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const targetId = link.getAttribute('href').replace('#', '');
+                    if (secIds.includes(targetId)) {
+                        activeTargetSec = targetId;
+                        setActiveLink(targetId);
+                        clearTimeout(unlockTimeout);
 
-            // Instant active highlight on click + lock during smooth scroll
-            allNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    const secId = link.getAttribute('data-sec');
-                    setActiveLink(secId);
-                    isClicking = true;
-                    clearTimeout(clickTimer);
-
-                    clickTimer = setTimeout(() => {
-                        isClicking = false;
-                        updateScrollspy();
-                    }, 1200);
+                        // Kunci selama 1.5 detik untuk durasi smooth scroll paling jauh
+                        unlockTimeout = setTimeout(() => {
+                            activeTargetSec = null;
+                            updateActiveSection();
+                        }, 1500);
+                    }
                 });
             });
 
+            // Begitu pergerakan scroll berhenti total (scrollend), lepas kuncian secara halus
             if ('onscrollend' in window) {
                 window.addEventListener('scrollend', () => {
-                    if (isClicking) {
-                        clearTimeout(clickTimer);
-                        clickTimer = setTimeout(() => {
-                            isClicking = false;
-                            updateScrollspy();
-                        }, 50);
+                    if (activeTargetSec) {
+                        clearTimeout(unlockTimeout);
+                        activeTargetSec = null;
+                        updateActiveSection();
                     }
                 });
             }
 
-            // Initial setup
-            updateScrollspy();
+            window.addEventListener('scroll', updateActiveSection, { passive: true });
+            window.addEventListener('resize', updateActiveSection, { passive: true });
+
+            // Initial trigger
+            updateActiveSection();
         })();
 
         // 6. Micro-interactions for project cards hover mouse movements
